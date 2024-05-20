@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&=swap');
 /*Grid System*/
 .row{
   display: flex;
@@ -5,36 +6,101 @@
 }
 .col-6{
   width: 500%;
+} 
+
+/*******CONTACT US********/
+.page__title,
+.page__contact{
+  padding: 50px;
 }
 
-/*Header about US y Contact Us*/
-.bg {
-  width: 100%;
-  height: 50vh;
-}
-.container1{
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 50vh;
+.container {
+  margin-inline: auto;
+  max-width: 68em;
+  padding-inline: 1rem;
 }
 
-.bg__content{
-  display: flex;
-  align-items: center;
-  height: 50vh;
-  width: 100%;
+.aboutus__info{
+  font-family: Poppins;
+  padding: 40px;
+  margin: 30px;
+  background: yellow;
+  transition: all 0.5s linear;
+}
+
+.aboutus__info:hover {
+  background: red;
+  color: white;
+}
+.content{
+  margin:6rem 0rem;
+}
+
+/*******QUESTION******/
+/*Question*/
+.question{
+  background:yellow;
+  padding: 100px 0;
+}
+.common {
+  width: 40%;
+  margin: 20px auto;
+  text-align: center;
+}
+.heading {
+  margin-bottom: 20px;
+  font-family: Poppins;
+}
+.commonBorder {
+  height: 3px;
+  width: 200px;
+  margin: 30px auto;
+}
+
+.question__box {
+  padding: 40px;
+  background: black;
+  border: none;
+  border-radius: 40px 10px;
+  color: white;
+  text-align: center;
+  margin: 20px;
+  transition: all 0.5s linear;
+  height: 350px;
+  width: 470px;
+}
+.question__box:hover {
+  background: white;
+  color: black;
+  border:3px solid #ff4a57;
+  border-radius: 40px 10px;
+}
+.commonIcons {
+  font-size: 40px;
+  color: #ff4a57;
+  margin-bottom: 15px;
+}
+.question__box:hover .commonIcons {
   color: yellow;
 }
+.question__box-header {
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-family: Poppins;
+}
+.question__box-p {
+  font-family: Poppins;
+}
 
-/*Boton Contact Us en pag About Us*/
-
-
+/****CONTACT US************************/
+.page__contact{
+  background: yellow;
+}
 /*BG Contact Us*/
 .contactCircles{
   list-style-type: none;
   display: flex;
+  align-items: left;
   margin-bottom: 20px;
 }
 
@@ -55,75 +121,28 @@
   transition: all 0.5s linear;
   cursor: pointer;
 }
-
-.contactCircles li:first-child{
-  margin-left: 0;
-}
-
-/*Img Contact Us*/
-.contactus__img img{
-  width: 550px;
-  height: 400px;
-}
 /*Titulo Contact Us*/
 
 .container__text{
   align-items: center;
   justify-content: center;
 }
-
-/*About Us*/
-.aboutus__img{
-  padding: 30px;
-}
-.aboutus__img img{
-  width: 550px;
-  height: 400px;
-}
-.about__info {
-  color: black;
-}
-.about__info-p1 {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-.about__info-p2 {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.aboutus__info{
-  font-family: Poppins;
-  padding: 40px;
-  margin: 30px;
-  background: yellow;
-  color: black;
-  transition: all 0.5s linear;
-}
-
-.aboutus__info:hover {
-  background: red;
-  color: white;
-}
-
-.aboutus_title{
-  font-size: 40px;
-  font-weight: 500;
-  margin-bottom: 15px;
+.contact__info,
+.title__info {
+  font-family: poppins;
 }
 
 /*Formulario*/
 .container_formulario{
   width: 130px;
 }
-@import url('https://fonts.googleapis.com/css2?family=Martel:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&=swap');
-
 .formulario{
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.85);
   border-radius: 30px;
+  height: 550px;
 }
 .input-box{
   position: relative;
@@ -190,64 +209,6 @@
   }
 }
 
-/*Question*/
-.question{
-  background:#FBEA37;
-  padding: 100px 0;
-  color: black;
-}
-.common {
-  width: 40%;
-  margin: 20px auto;
-  text-align: center;
-}
-.heading {
-  margin-bottom: 20px;
-  font-weight: 500;
-  color: black;
-  font-size: 40px;
-  font-family: Poppins;
-}
-.commonBorder {
-  background: white;
-  height: 3px;
-  width: 200px;
-  margin: 30px auto;
-}
-.question__box {
-  padding: 40px;
-  background: black;
-  border: none;
-  border-radius: 40px 10px;
-  color: #fff;
-  margin: 20px;
-  transition: all 0.5s linear;
-}
-.question__box:hover {
-  background: white;
-  color: black;
-  border:3px solid #ff4a57;
-  border-radius: 40px 10px;
-}
-.commonIcons {
-  font-size: 40px;
-  color: #ff4a57;
-  margin-bottom: 15px;
-}
-.question__box:hover .commonIcons {
-  color: yellow;
-}
-.question__box-header {
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 15px;
-  font-family: Poppins;
-}
-.question__box-p {
-  font-size: 14px;
-  color: black;
-  font-family: Poppins;
-}
 /*Btn Contact*/
 .container_btncontact{
   margin: 5em;
@@ -265,8 +226,10 @@
     font-size: 40px
   }
 
-  section .container__contact{
+  section .content{
     flex-direction: column;
+    margin-top: auto;
+
   }
 
   section .question__header{
