@@ -74,7 +74,7 @@ const ContactUs = () => {
                     <div className="col-md-6">
                         <div className="contactus__info">
                         <div className="common__contact">
-                                    <h3 className="title__info text-black fs-2 p-4">{header.mainHeader}</h3>
+                                    <h3 className="title__info text-black fs-1 p-4">{header.mainHeader}</h3>
                                 </div>
 
                                 <div>
@@ -90,7 +90,7 @@ const ContactUs = () => {
                                     ))}
                                 </div>
 
-                                <ul className="contactCircles">
+                               {/* <ul className="contactCircles">
                                         <li>
                                             <FaFacebookF />
                                         </li>
@@ -104,38 +104,39 @@ const ContactUs = () => {
                                             <FaWhatsapp />
                                         </li>
                                     </ul>
+                                */}
                         </div>
                     </div>
 
                     <div className="container_formulario">
-                        <div className="formulario col-6 m-2 p-4 d-flex content-justify-center">
+                        <div className="formulario col-6 m-2 p-4 d-flex content-justify-center" data-aos="zoom-out">
                             <form>
-                                <div class="input-box mb-3">
+                                <div class="input-box mb-3" data-aos="fade-left">
                                     <input type="text" id="exampleFormControlInput1" required />
                                     <label for="" class="form-label">Full Name</label>
                                     <span></span>
                                 </div>
-                                <div class="input-box mb-3">
+                                <div class="input-box mb-3" data-aos="fade-left">
                                     <input type="text" id="exampleFormControlInput1" required />
                                     <label for="" class="form-label">Last Name</label>
                                     <span></span>
                                 </div>
-                                <div class="input-box mb-3">
+                                <div class="input-box mb-3" data-aos="fade-left">
                                     <input type="email" id="exampleFormControlInput1" required />
                                     <label for="" class="form-label">Your Email</label>
                                     <span></span>
                                 </div>
-                                <div class="input-box mb-3">
+                                <div class="input-box mb-3" data-aos="fade-left">
                                     <input type="tel" id="exampleFormControlInput1" required />
                                     <label for="" class="form-label">Phone</label>
                                     <span></span>
                                 </div>
-                                <div class="input-box mb-3">
+                                <div class="input-box mb-3" data-aos="fade-left">
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                     <label for="exampleFormControlTextarea1" class="form-label"></label>
                                 </div>
 
-                                <div class="d-grid gap-2 mx-auto">
+                                <div class="d-grid gap-2 mx-auto" data-aos="fade-left">
                                     <button type="button" class="btn btn-outline-warning">SEND</button>
                                 </div>
                             </form>
