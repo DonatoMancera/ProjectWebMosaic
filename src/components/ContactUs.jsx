@@ -121,7 +121,7 @@ const ContactUs = () => {
                                 </div>
 
                                 <div class="d-grid gap-2 mx-auto" data-aos="fade-left">
-                                    <button type="button" class="btn btn-outline-warning ">SEND NOW</button>
+                                    <button type="button" class="btn btn-outline-warning fw-bold">SEND NOW</button>
                                 </div>
                             </form>
                         </div>
