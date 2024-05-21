@@ -48,7 +48,7 @@ const AboutUs = () => {
     ]);
 
     return (
-        <div>
+        <div className="about">
 
             <section className="page__title bg-black">
                 <div className="container">

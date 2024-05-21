@@ -1,5 +1,5 @@
 
-import { FaFacebookF, FaTwitter, FaInstagram, FaWhatsapp, FaHome , FaPhoneVolume, FaMailBulk } from "react-icons/fa";
+import { FaHome , FaPhoneVolume, FaMailBulk } from "react-icons/fa";
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import React, { useEffect } from 'react'
@@ -42,7 +42,7 @@ const ContactUs = () => {
         },
     ]);
     return ( 
-        <div>
+        <div className="contact">
             <section className=" page__title page__contact">
                 <div className="container">
                     <div className="row">
@@ -89,29 +89,13 @@ const ContactUs = () => {
                                         </div>
                                     ))}
                                 </div>
-
-                               {/* <ul className="contactCircles">
-                                        <li>
-                                            <FaFacebookF />
-                                        </li>
-                                        <li>
-                                            <FaTwitter />
-                                        </li>
-                                        <li>
-                                            <FaInstagram />
-                                        </li>
-                                        <li>
-                                            <FaWhatsapp />
-                                        </li>
-                                    </ul>
-                                */}
                         </div>
                     </div>
 
                     <div className="container_formulario">
                         <div className="formulario col-6 m-2 p-4 d-flex content-justify-center" data-aos="zoom-out">
                             <form>
-                                <div class="input-box mb-3" data-aos="fade-left">
+                                <div class="input-box mb-3">
                                     <input type="text" id="exampleFormControlInput1" required />
                                     <label for="" class="form-label">Full Name</label>
                                     <span></span>
@@ -137,7 +121,7 @@ const ContactUs = () => {
                                 </div>
 
                                 <div class="d-grid gap-2 mx-auto" data-aos="fade-left">
-                                    <button type="button" class="btn btn-outline-warning">SEND</button>
+                                    <button type="button" class="btn btn-outline-warning ">SEND NOW</button>
                                 </div>
                             </form>
                         </div>
