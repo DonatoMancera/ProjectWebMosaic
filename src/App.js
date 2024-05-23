@@ -1,16 +1,16 @@
 import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer'
-import Home from './components/Home'
-import AboutUs from './components/AboutUs'
-import Services from './components/Services'
-import ContactUs from './components/ContactUs'
+import AboutUs from './components/AboutUs/AboutUs.jsx'
+import Home from "./components/Home/Home.jsx"
+import NavBar from "./components/NavBar/NavBar.jsx"
+import Footer from "./components/Footer/footer.jsx"
+import ContactUs from './components/ContactUs/ContactUs.jsx'
+import Services from "./components/Services/AboutUs.jsx"
 import { Redirect, Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
     <>
-      <Header/>
+      <NavBar/>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/services" component={Services} />
