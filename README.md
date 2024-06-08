@@ -222,6 +222,8 @@ WebMosaic es una aplicación web moderna que utiliza una variedad de librerías 
 
 **Uso:** Se utiliza para recolectar métricas esenciales de rendimiento en la web.
 
+## COMPONENTES PRINCIPALES
+
 ### `App.js`
 
 El archivo `App.js` es el punto de entrada principal de la aplicación React. Aquí se configuran las rutas de la aplicación y se integran los componentes principales como la barra de navegación, el pie de página y las diferentes vistas.
@@ -241,3 +243,52 @@ Componente del pie de página que proporciona información adicional o enlaces e
 
  #### ContactUs.jsx
 Componente que representa la página de "Contáctanos". Se muestra cuando el usuario navega a la ruta /contactus.
+
+### `Home`
+
+ #### FirstSection
+    useEffect: Utilizado para inicializar las animaciones de AOS una vez que el componente se ha montado.
+    .homeContainer: Clase CSS que define el estilo del contenedor del título principal, incluyendo el tamaño, color y espaciado del texto.
+    .buttonContainer: Clase CSS que define el estilo del contenedor de los botones de llamada a la acción, incluyendo la disposición y el espaciado de los botones.
+    <svg>: Elemento SVG que representa una imagen de fondo para la sección. Este SVG se posiciona absolutamente para crear un efecto visual atractivo.
+ #### SecondSection
+    El componente SecondSection.jsx utiliza un efecto de máquina de escribir para animar el mensaje y mostrar palabras clave que se alternan automáticamente. Además, presenta un diseño visual atractivo con imágenes posicionadas estratégicamente.
+
+    Animación de texto dinámico: Utiliza un efecto de máquina de escribir para mostrar un mensaje que se dirige a diferentes audiencias.
+    Imágenes posicionadas: Muestra imágenes de fondo vertical y horizontal que complementan el diseño visual de la sección.
+    Diseño responsive: Se adapta a diferentes tamaños de pantalla para garantizar una experiencia de usuario consistente en dispositivos móviles y de escritorio.
+    Este componente utiliza la librería styled-components para definir los estilos CSS directamente en el código de React, lo que facilita la creación de componentes con estilos personalizados y responsive.
+ #### thirdSection
+    El componente ThirdSection.jsx es responsable de mostrar una sección que presenta información sobre los servicios ofrecidos por la empresa, junto con una serie de tarjetas deslizantes que muestran ejemplos de dichos servicios.
+
+    Características Principales
+    Información sobre Servicios: Se muestra un mensaje introductorio que invita al usuario a descubrir más sobre los servicios ofrecidos por la empresa.
+
+    Tarjetas Deslizantes: Utiliza un componente de carrusel (Carousel) para mostrar una serie de tarjetas que representan ejemplos de los servicios ofrecidos. Cada tarjeta incluye un título y una breve introducción.
+
+    Diseño Responsive: El diseño se adapta de manera óptima a diferentes dispositivos y tamaños de pantalla, garantizando una presentación visualmente atractiva en dispositivos móviles y de escritorio.
+
+
+### `AboutUs`
+
+ El componente AboutUs es una función de React que devuelve la estructura de la página "Acerca de Nosotros". Esta página está compuesta por dos secciones:
+
+ #### <FirstSectionAboutUs/>: La primera sección que contiene información relevante sobre la empresa.
+
+        useEffect: Utilizado para inicializar las animaciones de AOS una vez que el componente se ha montado.
+        useState: Utilizado para gestionar el estado de cont.
+        data: Array de objetos que contiene la información de los servicios ofrecidos por la empresa.
+        <InicioContainer>: Contenedor principal que organiza la estructura de la sección.
+        .Container: Clase CSS que define el estilo de cada elemento de servicio, incluyendo el título, la descripción y el ícono.
+        Media Queries: Se aplican estilos diferentes según el tamaño de la pantalla para asegurar la visualización adecuada en dispositivos de diferentes tamaños.
+
+ #### <Services/>: La sección donde aparecen los integrantes.
+
+        useEffect: Utilizado para inicializar las animaciones de AOS una vez que el componente se ha montado.
+        useState: Utilizado para gestionar el estado de cont.
+        data: Array de objetos que contiene la información de los servicios ofrecidos por la empresa, incluyendo el nombre, la descripción y la imagen.
+        handleSelect: Función que actualiza el estado cont cuando se selecciona un ítem en el carrusel.
+        .InicioContainer: Clase CSS que define el estilo del contenedor principal de cada servicio, incluyendo la disposición de los elementos y los estilos responsivos para diferentes tamaños de pantalla.
+        .textContainer: Clase CSS que define el estilo del contenedor de texto que muestra el nombre, la descripción y los iconos de cada servicio.
+        .Carrusel: Clase CSS que define el estilo del carrusel de imágenes, incluyendo la disposición y el tamaño de las imágenes y los estilos responsivos para diferentes tamaños de pantalla.
+        Esta estructura permite mostrar de manera organizada y coherente la información sobre la empresa y sus servicios en la página "Acerca de Nosotros".
