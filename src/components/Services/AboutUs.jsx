@@ -1,12 +1,12 @@
 import React from "react";
-import Donato from "./Donato/Donato";
+import Services from "./ServicesPage/Services";
 import FirstSectionAboutUs from "./FistSectionAboutUs/FirstSectionAboutus";
 
 function AboutUs(){
     return(
         <>
             <FirstSectionAboutUs/>
-            <Donato/>
+            <Services/>
         </>
     )
 }

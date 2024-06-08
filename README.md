@@ -292,3 +292,4 @@ Componente que representa la página de "Contáctanos". Se muestra cuando el usu
         .textContainer: Clase CSS que define el estilo del contenedor de texto que muestra el nombre, la descripción y los iconos de cada servicio.
         .Carrusel: Clase CSS que define el estilo del carrusel de imágenes, incluyendo la disposición y el tamaño de las imágenes y los estilos responsivos para diferentes tamaños de pantalla.
         Esta estructura permite mostrar de manera organizada y coherente la información sobre la empresa y sus servicios en la página "Acerca de Nosotros".
+

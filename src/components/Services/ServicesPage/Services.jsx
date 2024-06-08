@@ -7,7 +7,7 @@ import img2 from "./imgApoyo2.jpg";
 import { DiJsBadge, DiHtml5, DiBootstrap, DiCss3, DiPhotoshop, DiDjango, DiNodejsSmall } from "react-icons/di";
 import { Carousel } from "react-bootstrap";
 
-function Donato() {
+function Services() {
     useEffect(() => {
         Aos.init();
     }, []);
@@ -60,7 +60,7 @@ function Donato() {
     );
 }
 
-export default Donato;
+export default Services;
 
 const InicioContainer = styled.div`
   margin: 3rem;
