@@ -1,7 +1,5 @@
 import React from "react";
 import Donato from "./Donato/Donato";
-import Andres from "./Andres/Andres";
-import Lizbeth from "./Lizbeth/Lizbeth";
 import FirstSectionAboutUs from "./FistSectionAboutUs/FirstSectionAboutus";
 
 function AboutUs(){
@@ -9,8 +7,6 @@ function AboutUs(){
         <>
             <FirstSectionAboutUs/>
             <Donato/>
-            <Lizbeth/>
-            <Andres/>
         </>
     )
 }

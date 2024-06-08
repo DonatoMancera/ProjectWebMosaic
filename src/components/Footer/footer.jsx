@@ -23,10 +23,9 @@ const Footer = () => {
 export default Footer;
 
 const FooterContainer = styled.footer`
-  height: auto;
   background-color: white;
   color: black;
-  padding: 10px 0;
+  padding: 20px 0;
 `;
 
 const TopLine = styled.div`
@@ -37,66 +36,66 @@ const TopLine = styled.div`
 
 const FooterContent = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   font-family: 'Roboto', sans-serif;
-  flex-wrap: wrap; 
-  padding: 0 20px; 
+  flex-wrap: wrap;
+  padding: 0 20px;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    text-align: center; 
+    text-align: center;
   }
 `;
 
 const LeftContent = styled.div`
-  width: 40%;
+  flex: 1;
+  margin-right: 20px;
 
   @media (max-width: 768px) {
-    width: 100%; 
-    margin-bottom: 20px; 
+    width: 100%;
+    margin-bottom: 20px;
+    margin-right: 0;
   }
 `;
 
 const RightContent = styled.div`
-  width: 50%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  background-color: white;
 
   @media (max-width: 768px) {
-    width: 100%; 
-    align-items: center; 
+    width: 100%;
+    align-items: center;
   }
 `;
 
 const FooterLinks = styled.div`
+  width: 100%;
+
   div {
     display: inline-block;
     width: 100%;
-    margin-left: 10rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: solid 2px black;
+    margin: 0 auto 1rem;
+    padding: 1rem;
+    border-bottom: 2px solid black;
+    text-align: left;
 
     &:hover {
-      background-color: #FFFF00;
+      background-color: #DDF247;
     }
+
     @media (max-width: 768px) {
-      margin-left: 0%;
-      
-      
+      text-align: center;
+      margin: 0;
     }
   }
 
   a {
     color: black;
     text-decoration: none;
-    margin-bottom: 10px;
     transition: color 0.3s;
-    padding-left: 1rem;
-    padding-right: 5rem;
 
     &:hover {
       color: white;

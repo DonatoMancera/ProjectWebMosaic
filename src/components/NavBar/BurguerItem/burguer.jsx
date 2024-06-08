@@ -1,9 +1,14 @@
 import React from "react";
+
+import { useState } from 'react';
 import styled from "styled-components";
 
 function Burguer(props) {
+
+
     return (
         <>
+            
             <BurguerItem >
                 <div onClick={props.handleClick} className={`nav-icon1 ${props.clicked ? 'open' : '' }`}>
                     <span></span>
@@ -39,7 +44,7 @@ const BurguerItem = styled.div`
     position: absolute;
     height: 9px;
     width: 70%;
-    background: #FF1F1F;
+    background: #F4f4f2;
     z-index: 20;
     border-radius: 9px;
     opacity: 1;

@@ -1,139 +1,88 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import firtImg from "./firstImg.png"
-import secondImg from "./secondImg.png"
+import { FaCode } from "react-icons/fa6";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 function FirstSectionAboutUs(){
-    return(
-        <AboutUsConteiner>
-            <div class="custom-shape-divider-top-1716245214">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-                </svg>
-            </div>
-            <div className="img-container">
-                <img src={secondImg} alt="" />
-            </div>
-            <div className="textContainer">
-                <h1>we want you to know more about us</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni modi eveniet aspernatur illum nobis.</p>
-                <button>Explore</button>
-            </div>
-            <div className="img-container">
-                <img src={firtImg} alt="" />
-            </div>
-        </AboutUsConteiner>
-    )
+    useEffect(() => {
+        Aos.init();
+    }, []);
+
+    const [cont, setCont] = useState(1);
+
+    const data = [
+        {
+            title: "Design", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus vehicula sem nec commodo. Nam eros lectus, vulputate commodo tristique nec, aliquam non leo. Donec id accumsan tellus."
+        },
+        {
+            title: "FrontEnd", description: "Fusce eget pretium diam, sit amet faucibus sapien. Curabitur fringilla ante sed vehicula gravida. Sed mollis purus a accumsan sagittis. Maecenas iaculis lacinia tortor id fringilla"
+        },
+        {
+            title: "BackEnd", description: "Morbi cursus libero gravida ullamcorper porta. Curabitur volutpat ligula ac metus laoreet, aliquet elementum odio scelerisque. Etiam tellus erat"
+        }
+    ];
+
+    return (
+        <InicioContainer>
+            {data.map((item, index) => (
+                <div key={index} className="Container">
+                    <div>
+                        <h2>{cont + index}</h2>
+                        <FaCode className="Icon" data-aos="zoom-in-up"/>
+                    </div>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                </div>
+            ))}
+        </InicioContainer>
+    );
 }
 
 export default FirstSectionAboutUs;
 
-const AboutUsConteiner = styled.div`
-    margin-top: 2rem;
+const InicioContainer = styled.div`
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-
-    .custom-shape-divider-top-1716245214 {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-    }
-
-    .custom-shape-divider-top-1716245214 svg {
-        position: relative;
-        display: block;
-        width: calc(100% + 1.3px);
-        height: 140px;
-    }
-
-    .custom-shape-divider-top-1716245214 .shape-fill {
-        fill: #ffffff;
-    }
-
-    .img-container {
-        width: 40%;
-        margin: 2rem 0;
-        &:nth-child(2){
-            display: none;
+    flex-direction: row;
+    height: auto;
+    background-color: #101010;
+    padding: 40px;
+    .Container {
+        font-family: "Poppins", sans-serif;
+        width: auto;
+        height: auto;
+        padding: 30px 50px 10px 20px;
+        color: #F4F4F2;
+        border-left: 3px solid #DDF247;
+        h2{
+            margin-bottom: 100px;
+            font-weight: 900;
         }
-        @media (max-width: 768px) {
-            width: 100%;
-            &:nth-child(2){
-            display: initial;
+        h3{
+            margin-bottom: 70px;
+            font-weight: 700;
         }
-        }
-
-        img {
-            width: 100%;
-            height: auto;
-            opacity: 0.5;
+        div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .Icon{
+                font-size: 40px;
+                color: #DDF247;
+            }
         }
     }
-    .textContainer {
-    font-family: "Poppins", sans-serif;
-    color: white;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    text-align: center;
 
     @media (max-width: 768px) {
-        width: 100%;
-
-    }
-
-    h1 {
-        color: #2c2b2b;
-        font-weight: 900;
-        margin-bottom: 1rem;
-
-        @media (max-width: 768px) {
-        font-size: 2rem;
+        flex-direction: column;
+        .Container {
+            padding: 20px 40px 10px 40px;
         }
     }
 
-    p {
-        color: #2c2b2b;
-        font-size: 1.1rem;
-        margin-bottom: 2rem;
-        max-width: 25rem;
-
-        @media (max-width: 768px) {
-        font-size: 1.5rem;
+    @media (max-width: 480px) {
+        .Container {
+            padding: 10px 20px 5px 20px;
         }
     }
-
-    button {
-        font-weight: 200;
-        font-style: normal;
-        height: 2.5rem;
-        margin-top: 1.5rem;
-        background-color: #2c2b2b;
-        color: #fff;
-        border: none;
-        border-radius: 10px;
-        padding: 10px 20px;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s;
-
-        @media (max-width: 768px) {
-        font-size: 1.2rem;
-        }
-    }
-
-    button:hover {
-        background-color: #ffff00;
-        color: black;
-    }
-}
-    
-`
+`;

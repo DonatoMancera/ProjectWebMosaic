@@ -1,9 +1,15 @@
-
-import { FaCircleCheck } from "react-icons/fa6";
+import React, { useEffect } from 'react'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import React, { useEffect } from 'react'
+import { FaCircleCheck } from "react-icons/fa6";
+import Badge from 'react-bootstrap/Badge';
+import Stack from 'react-bootstrap/Stack';
+import Accordion from 'react-bootstrap/Accordion';
 import about from '..//assets/images/aboutus.jpg';
+import about1 from '..//assets/images/about1.jpg';
+import about2 from '..//assets/images/about2.jpg';
+import styled from "styled-components";
+
 
 const AboutUs = () => {
 
@@ -14,7 +20,7 @@ const AboutUs = () => {
     /*********************************************/
 
     const [header] = React.useState({
-        mainHeader: "Frequently Asked Questions"
+        mainHeader: "Frequently Asked"
     });
     const [state] = React.useState([
         {
@@ -48,75 +54,194 @@ const AboutUs = () => {
     ]);
 
     return (
-        <div className="about">
+        <Aboutus>
+            <div className="about">
 
-            <section className="page__title bg-black">
-                <div className="container">
-                    <div className="row">
-                        <div class="d-flex justify-content-center">
-                            <div className="content__text text-warning text-center" data-aos="zoom-out-down">
-                                <h1 className="display-1 fw-bold">About Us</h1>
-                                <p className="display-5">OUR HISTORY</p>
+                <section className="page__title">
+                    <div className="container">
+                        <div className="aboutus__img" data-aos="flip-left">
+                            <img src={about} className="rounded" alt="about us"  width="100%" height="450px" />
+                        </div>
+                        <div className="content row">
+                            <div className="col-md-4 d-flex">
+                                <div className="content__text text-center" data-aos="zoom-out-down">
+                                    <h1 className="display-5 fw-bold">About Us</h1>
+                                    <p className="display-6">OUR HISTORY</p>
+                                </div>
+                            </div>
+                            <div className="col-md-8">
+                                <div className="aboutus__info mt-0 mb-0" data-aos="flip-right">
+                                    <h1 className="aboutus__title text-black mb-3" data-aos="fade-right">Who We are</h1>
+                                    <div className="about__text fs-5">
+                                        <p className="aboutus__info-p1" data-aos="fade-left">
+                                            Welcome to WebMosaic, where innovation meets reliability. Founded on the principles of cutting-edge technology and unwavering commitment to excellence, we are your trusted partner for business services and IT solutions.
+                                        </p>
+                                        <p className="about__info-p2" data-aos="fade-left">
+                                            At WebMosaic, we are a team of passionate professionals dedicated to empowering businesses with transformative technology solutions. With a rich history of successful partnerships and a forward-thinking approach, we strive to be at the forefront of the ever-evolving tech landscape.
+                                        </p>
+                                    </div>
+                                    <div class="d-flex justify-content-center mt-4">
+                                        <a href="/contactus" class="btn btnanimate fw-bold" tabindex="-1" role="button">CONTACT US</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
 
-            
+                    </div>
+                </section>
+
+
                 <section className="container">
                     <div className="content row">
-                        <div className="col-md-6 d-flex">
-                            <div className="aboutus__img" data-aos="flip-left">
-                                <img src={about} alt="about us" width="450px" height="350px"/>
-                            </div>
-                        </div>
                         <div className="col-md-6">
                             <div className="aboutus__info mt-0 mb-0" data-aos="flip-right">
-                                <h1 className="aboutus__title text-black" data-aos="fade-right">Who We are</h1>
-                                <div className="about__text fs-6">
-                                <p className="aboutus__info-p1" data-aos="fade-left">
-                                    Welcome to WebMosaic, where innovation meets reliability. Founded on the principles of cutting-edge technology and unwavering commitment to excellence, we are your trusted partner for business services and IT solutions.
-                                </p>
-                                <p className="about__info-p2" data-aos="fade-left">
-                                    At WebMosaic, we are a team of passionate professionals dedicated to empowering businesses with transformative technology solutions. With a rich history of successful partnerships and a forward-thinking approach, we strive to be at the forefront of the ever-evolving tech landscape.
-                                </p>
-                                </div>
-                                <div class="d-grid gap-2 mx-auto" data-aos="fade-up" data-aos-duration="3000">
-                                    <button type="button" class="btn btn-outline-dark">CONTACT US</button>
+                                <h1 className="aboutus__title text-black mb-3 mt-0" data-aos="fade-right">Our Mission</h1>
+                                <div className="about__text fs-5">
+                                    <p className="aboutus__info-p1 mb-0" data-aos="fade-left">
+                                        Our mission is to drive your success through innovative and tailored IT solutions. We believe in the power of technology to propel businesses forward, and we are committed to delivering solutions that not only meet but exceed your expectations.
+                                    </p>
                                 </div>
                             </div>
+
+                            <div className="row">
+                                <div className="col mt-5 ms-4 fs-4">
+                                    <Stack className="bagde" direction="horizontal" gap={4}>
+                                        <Badge bg="dark">HTML</Badge>
+                                        <Badge bg="dark">CSS</Badge>
+                                        <Badge bg="dark">BOOTSTRAP</Badge>
+
+                                    </Stack>
+                                </div>
+                                <div className="col mt-3 ms-4 fs-4">
+                                    <Stack direction="horizontal" gap={4}>
+                                        <Badge bg="dark">JAVASCRIPT</Badge>
+                                        <Badge bg="dark">REACT</Badge>
+                                        <Badge bg="dark">PYTHON</Badge>
+                                    </Stack>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="items-content-center col-md-6">
+                            <img src={about1} alt="about us" className="rounded-5" width="480px" height="500px" />
                         </div>
                     </div>
                 </section>
 
-                <section className="question text-black">
+                <section className="question">
                     <div className="container" data-aos="zoom-in-up">
                         <div className="container_question">
                             <div className="question__header" data-aos="fade-up-left">
                                 <div className="common">
-                                    <h3 className="heading text-black fs-1">{header.mainHeader}</h3>
+                                    <h2 className="heading text-light fs-1">{header.mainHeader}<span className="txt-color"> Questions</span></h2>
                                     <div className="commonBorder bg-light"></div>
                                 </div>
-
-                                <div className="row">
-                                    {state.map((info) => (
-
-                                        <div className="col-md-6" data-aos="fade-up" data-aos-duration="3000">
-                                            <div className="question__box">
-                                                {info.icon}
-                                                <div className="question__box-header fs-5">{info.heading}</div>
-                                                <div className="question__box-p fs-6 text-black">{info.text}</div>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
                             </div>
+                                <div className="row mt-5">
+
+                                    <div className="col-md-6">
+                                        <img src={about2} alt="about us" className="rounded-5" width="100%" height="400px" />
+                                    </div>
+
+                                    <div className="accordion col-md-6 mb-3">
+                                        {state.map((info) => (
+
+                                            <Accordion defaultActiveKey="0">
+                                                <Accordion.Item className="text_accordion" eventKey="1">
+                                                    <Accordion.Header><span className="commonIcons">{info.icon}</span>{info.heading}</Accordion.Header>
+                                                    <Accordion.Body className="bg-dark --bs-bg-opacity: .5; text-light fs-5">{info.text}</Accordion.Body>
+                                                </Accordion.Item>
+                                            </Accordion>
+
+                                        ))}
+                                    </div>
+
+                                </div>
+                            
                         </div>
                     </div>
                 </section>
-        </div>
+            </div>
+        </Aboutus>
     )
 }
 
-export default AboutUs
+export default AboutUs;
+
+const Aboutus = styled.section`
+  
+  .page__title,
+  .page__contact {
+    padding: 50px;
+    background: #101010;
+  }
+  
+  .container {
+    margin-inline: auto;
+    max-width: 68em;
+    padding-inline: 1rem;
+  }
+  
+  .content__text {
+    color: #DDF247;
+  }
+  
+  .aboutus__info {
+    font-family: Playfair Display;
+    padding: 40px;
+    background: #DDF247;
+    transition: all 0.5s linear;
+  }
+  
+  .content {
+    margin: 6rem 0rem;
+  }
+
+  .btnanimate{
+    background: #101010;
+    border:none;
+    color: #F4F4F2;
+    width: 80%;
+    transition: .4s all;
+  }
+
+ .btnanimate:hover {
+    transform: scale(1.2);
+  }
+  
+  /*******QUESTION******/
+  /*Question*/
+  .question {
+    background: #101010;
+    padding: 100px 0;
+  }
+  
+  .common {
+    width: 40%;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .heading {
+    margin-bottom: 20px;
+    font-family: Playfair Display;
+  }
+  
+  .txt-color {
+    color: #DDF247;
+  }
+  
+  .commonBorder {
+    height: 3px;
+    width: 200px;
+    margin: 30px auto;
+  }
+.commonIcons {
+  font-size: 40px;
+  color: #F1511B;
+  margin-right: 8px;
+}
+  /** BAGDE **/
+  .badge:hover{
+    color: #DDF247;
+  }
+`

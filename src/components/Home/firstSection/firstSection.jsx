@@ -1,29 +1,87 @@
-import React from "react";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useEffect } from 'react'
 import styled from "styled-components";
-
-
 function FirstSection(){
+
+    useEffect(() => {
+        Aos.init();
+    },)
+    /*********************************************/
+
+    
+
     return (
         <>
             <FirstContainer>
                 <div className="homeContainer">
-                    <h1>TRANSFORMING BUSINESSES,<br/>EMPOWERING FUTURES</h1>
-                    <button>LET'S BUILD A WEBSITE</button>
-                    <svg className="redForm" width="947" height="511" viewBox="0 0 947 511" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path id="Vector" d="M0 465.312C0 490.164 20.1472 510.312 45 510.312L157.662 510.311L315.324 510.312H472.992H630.661H788.346H901.034C925.887 510.312 946.034 490.164 946.034 465.312V45.2231C946.034 9.87173 907.143 -11.675 877.171 7.07114L788.346 62.6283L647.042 7.40248C636.509 3.2858 624.812 3.286 614.279 7.40306L472.992 62.6283L331.706 7.40352C321.173 3.28618 309.475 3.28627 298.941 7.40375L157.662 62.6283L68.8656 7.08017C38.8941 -11.6691 0 9.87745 0 45.2303V465.312Z" fill="#FF1F1F"/>
-                    </svg>
-                    <svg className="semiCircle" width="1093" height="536" viewBox="0 0 1093 536" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path id="Vector" d="M556.746 0C249.243 0 0 239.718 0 535.47H339.259C339.259 419.949 436.631 326.348 556.746 326.348C676.804 326.348 774.176 419.949 774.176 535.47H1093C1093 239.722 864.192 0 556.746 0Z" fill="#FFFF00"/>
-                    </svg>
-                    <svg className="blackFlower" width="878" height="840" viewBox="0 0 878 840" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path id="Vector" d="M439.075 178.778C439.075 -82.6299 227.956 -39.4672 339.725 199.088C227.956 -39.4704 53.3401 82.5493 257.554 256.509C53.3401 82.5493 -54.5761 262.326 206.77 341.11C-54.5761 262.326 -77.1369 468.779 196.154 438.265C-77.1369 468.779 -10.44 666.206 227.541 531.171C-10.44 666.206 133.985 820.475 295.504 603.767C133.982 820.475 331.159 904.908 388.291 643.5C331.159 904.908 546.995 904.908 489.863 643.5C546.995 904.908 744.172 820.471 582.65 603.767C744.172 820.475 888.594 666.203 650.613 531.171C888.594 666.206 955.29 468.779 682 438.265C955.29 468.779 932.73 262.326 671.384 341.11C932.73 262.326 824.81 82.5493 620.6 256.509C824.814 82.5493 650.198 -39.4672 538.429 199.088C650.194 -39.4704 439.075 -82.6299 439.075 178.778Z" fill="#2C2B2B"/>
-                    </svg>
+                    <h1><span>TRANSFORMING</span> BUSINESSES,<br/>EMPOWERING FUTURES</h1>
                 </div>
-                <div className="homeTextContainer">
-                    <h3>Web Programming</h3>
-                    <h3>Back-End Services</h3>
-                    <h3>Web Desing</h3>
+                <div className=" buttonContainer d-flex justify-content-start mx-auto" data-aos="fade-up" data-aos-duration="3000">
+                    <button type="button" class="btn btn-outline-light btn-lg me-5 ms-5">Let's build a website</button>
+                    <button type="button" class="btn btn-outline-light btn-lg">About Us</button>
                 </div>
+                <svg width="1841" height="1383" viewBox="0 0 1841 1383" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Group 4">
+                        <rect id="Rectangle 1" x="491" y="1383" width="413" height="850" rx="206.5" transform="rotate(-90 491 1383)" fill="url(#paint0_linear_33_2)"/>
+                        <rect id="Rectangle 8" x="991" y="898" width="413" height="850" rx="206.5" transform="rotate(-90 991 898)" fill="url(#paint1_linear_33_2)"/>
+                        <rect id="Rectangle 2" x="20" y="898" width="413" height="850" rx="206.5" transform="rotate(-90 20 898)" fill="url(#paint2_linear_33_2)"/>
+                    <g id="Rectangle 3">
+                        <rect x="491" y="413" width="413" height="850" rx="206.5" transform="rotate(-90 491 413)" fill="#DDF247"/>
+                        <rect x="491" y="413" width="413" height="850" rx="206.5" transform="rotate(-90 491 413)" fill="url(#paint3_linear_33_2)" fill-opacity="0.5"/>
+                    </g>
+                    <g id="Ellipse 1">
+                        <circle cx="445" cy="970" r="46" transform="rotate(-90 445 970)" fill="#F1511B"/>
+                        <circle cx="445" cy="970" r="46" transform="rotate(-90 445 970)" fill="url(#paint4_linear_33_2)" fill-opacity="0.5"/>
+                    </g>
+                    <g id="Ellipse 2">
+                        <circle cx="1387" cy="367" r="46" transform="rotate(-90 1387 367)" fill="#DDF247"/>
+                        <circle cx="1387" cy="367" r="46" transform="rotate(-90 1387 367)" fill="url(#paint5_linear_33_2)"/>
+                    </g>
+                    <g id="Ellipse 4">
+                        <circle cx="1795" cy="970" r="46" transform="rotate(-90 1795 970)" fill="#F1511B"/>
+                        <circle cx="1795" cy="970" r="46" transform="rotate(-90 1795 970)" fill="url(#paint6_linear_33_2)"/>
+                    </g>
+                    <g id="Ellipse 3">
+                        <circle cx="46" cy="439" r="46" transform="rotate(-90 46 439)" fill="#DDF247"/>
+                        <circle cx="46" cy="439" r="46" transform="rotate(-90 46 439)" fill="url(#paint7_linear_33_2)" fill-opacity="0.2"/>
+                    </g>
+                    </g>
+                    <defs>
+                    <linearGradient id="paint0_linear_33_2" x1="799" y1="1435.5" x2="904" y2="2209" gradientUnits="userSpaceOnUse">
+                    <stop offset="0.28" stop-color="#D32F2F"/>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_33_2" x1="1299" y1="950.5" x2="1404" y2="1724" gradientUnits="userSpaceOnUse">
+                    <stop offset="0.28" stop-color="#009688"/>
+                    </linearGradient>
+                    <linearGradient id="paint2_linear_33_2" x1="226.5" y1="898" x2="226.5" y2="1748" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F1511B"/>
+                    </linearGradient>
+                    <linearGradient id="paint3_linear_33_2" x1="778.5" y1="442.5" x2="625" y2="1252" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F4F4F2" stop-opacity="0"/>
+                    <stop offset="0.473259" stop-color="#F4F4F2" stop-opacity="0.03"/>
+                    <stop offset="0.946005" stop-color="#F4F4F2"/>
+                    </linearGradient>
+                    <linearGradient id="paint4_linear_33_2" x1="468.5" y1="934.5" x2="427" y2="1012" gradientUnits="userSpaceOnUse">
+                    <stop offset="0.146" stop-color="#F4F4F2" stop-opacity="0"/>
+                    <stop offset="0.741" stop-color="#F4F4F2"/>
+                    </linearGradient>
+                    <linearGradient id="paint5_linear_33_2" x1="1387" y1="321" x2="1333.5" y2="431.5" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#009688" stop-opacity="0"/>
+                    <stop offset="1" stop-color="#009688"/>
+                    </linearGradient>
+                    <linearGradient id="paint6_linear_33_2" x1="1791.34" y1="924" x2="1868.5" y2="1016" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#009688" stop-opacity="0"/>
+                    <stop offset="1" stop-color="#009688"/>
+                    </linearGradient>
+                    <linearGradient id="paint7_linear_33_2" x1="89" y1="439" x2="6" y2="459.5" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F1511B" stop-opacity="0"/>
+                    <stop offset="0.77" stop-color="#F1511B"/>
+                    </linearGradient>
+                    </defs>
+                </svg>
+
             </FirstContainer>
         </>
     )
@@ -34,127 +92,38 @@ export default FirstSection;
 const FirstContainer = styled.div`
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     width: 100%;
-    height: 20rem;
-    margin-top: 2rem;
+    height: 30rem;
+    padding-top: 4rem;
+    padding-bottom: 8rem;
     position: relative;
+    background-color: #101010;
+
     .homeContainer {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        position: relative;
         h1 {
             font-family: "Poppins", sans-serif;
+            color: #F4F4F2;
             font-weight: 900;
             font-size: 2.5rem;
-            margin-top: 3.5rem;
-            margin-left: 5px;
-        }
-        button {
-            font-family: "Poppins", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            margin-top: 4rem;
-            margin-left: 5px;
-            height: 3.5rem;
-            padding: 3px;
-            background-color: #2C2B2B; 
-            color: #fff; 
-            border: none;
-            border-radius: 10px; 
-            padding: 10px 20px; 
-            font-size: 16px; 
-            cursor: pointer; 
-            transition: background-color 0.3s, color 0.3s;
-        }
-        button:hover {
-            background-color: #FFFF00; 
-            color: black; 
-        }
-        .redForm {
-            display: block;
-            position: absolute;
-            width: 30%;
-            height: 30%;
-            z-index: -1;
-            left: 50px;
-            transform: rotate(15deg);
-            transition: .3s;
-            animation: moveRedForm 4s ease-in 2s infinite;
-        }
-        @keyframes moveRedForm {
-            0% {
-                transform: rotate(15deg) rotateY(180deg);
-            }
-            50% {
-                transform: rotate(15deg) rotateY(0deg);
-            }
-            100% {
-                transform: rotate(15deg) rotateY(-180deg);
-            }
-        }
-        .semiCircle {
-            display: block;
-            position: absolute;
-            width: 30%;
-            height: 30%;
-            z-index: -1;
-            left: 400px;
-            transform: rotate(15deg);
-            animation: deformAndBounce 1s ease-in-out 2s infinite;
-        }
-        @keyframes deformAndBounce {
-            0% {
-                transform: rotate(15deg) scale(1);
-            }
-            25% {
-                transform: rotate(15deg) scale(1.2);
-            }
-            50% {
-                transform: rotate(15deg) scale(0.8);
-            }
-            75% {
-                transform: rotate(15deg) scale(1.1);
-            }
-            100% {
-                transform: rotate(15deg) scale(1);
-            }
-        }
-        .blackFlower {
-            display: block;
-            position: absolute;
-            width: 40%;
-            height: 40%;
-            z-index: -1;
-            left: 700px;
-            top: 60px;
-            transition: .3s;
-        }
-        .blackFlower:hover {
-            animation: moveblackflower 3s linear infinite;
-            z-index: 3;
-        }
-        @keyframes moveblackflower {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
+            margin-top: 8rem;
+            margin-left: 25px;
+            span {
+                color: #F1511B;
             }
         }
     }
-    .homeTextContainer {
-        font-family: "Poppins", sans-serif;
-        font-weight: 200;
-        font-size: 20px;
-        font-style: normal;
-        margin-top: 1rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+    svg{
+        position: absolute;
+        top: -27.2rem;
+        left: 50rem;
+        width: 40%;
+        z-index: 5;
     }
 
     @media (max-width: 900px) {
         height: auto;
+        svg{
+            display: none;
+        }
         .homeContainer {
             align-items: center;
             h1 {
@@ -162,34 +131,6 @@ const FirstContainer = styled.div`
                 text-align: center;
                 margin: 2rem 0;
             }
-            button {
-                margin-left: 0;
-            }
-            .redForm {
-                width: 50%;
-                height: 50%;
-                left: 0;
-            }
-            .semiCircle {
-                width: 50%;
-                height: 50%;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            .blackFlower {
-                width: 30%;
-                height: 30%;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-            }
-        }
-        .homeTextContainer {
-            flex-direction: column;
-            align-items: center;
-            h3 {
-                margin: 0.5rem 0;
-            }
         }
     }
-`
+`;

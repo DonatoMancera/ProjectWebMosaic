@@ -1,184 +1,247 @@
+import React, { useEffect } from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+import { FaCircleCheck } from "react-icons/fa6";
+import Badge from 'react-bootstrap/Badge';
+import Stack from 'react-bootstrap/Stack';
+import Accordion from 'react-bootstrap/Accordion';
+import about from '..//assets/images/aboutus.jpg';
+import about1 from '..//assets/images/about1.jpg';
+import about2 from '..//assets/images/about2.jpg';
+import styled from "styled-components";
 
-import React, { useState, useEffect } from 'react';
-import { FaHome, FaPhoneVolume, FaMailBulk } from 'react-icons/fa';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
 
-const ContactUs = () => {
-    // Inicialización de AOS
+const AboutUs = () => {
+
+    /*AOS*/
     useEffect(() => {
         Aos.init();
-    }, []);
+    },)
+    /*********************************************/
 
-    // Estado para los campos del formulario
-    const [formData, setFormData] = useState({
-        name: '',
-        lastName: '',
-        email: '',
-        phone: '',
-        message: ''
+    const [header] = React.useState({
+        mainHeader: "Frequently Asked"
     });
-
-    // Manejar cambios en los campos del formulario
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
-    // Manejar envío del formulario
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        
-        try {
-            const response = await fetch('http://localhost:8000/api/contact-us/', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            });
-
-            if (response.ok) {
-                const data = await response.json();
-                console.log(data); // Manejar respuesta del servidor
-            } else {
-                console.error('Error al enviar el formulario');
-            }
-        } catch (error) {
-            console.error('Error en la solicitud:', error);
-        }
-    };
+    const [state] = React.useState([
+        {
+            id: 1,
+            icon: <FaCircleCheck className="commonIcons" />,
+            heading: "What IT solutions does your company offer ?",
+            text:
+                "Our company offers a wide range of IT solutions including network infrastructure setup, cloud computing services, cybersecurity solutions, software development, and IT consulting services.",
+        },
+        {
+            id: 2,
+            icon: <FaCircleCheck className="commonIcons" />,
+            heading: "How can IT solutions benefit my business ?",
+            text:
+                "IT solutions can benefit your business by improving operational efficiency, enhancing productivity, ensuring data security, providing access to advanced technologies, and enabling better decision-making through data analytics.",
+        },
+        {
+            id: 3,
+            icon: <FaCircleCheck className="commonIcons" />,
+            heading: "Are your IT solutions customizable to suit our business requirements ?",
+            text:
+                "Yes, our IT solutions are highly customizable and tailored to meet the unique requirements of each business. We work closely with our clients to understand their specific needs and provide customized solutions accordingly.",
+        },
+        {
+            id: 4,
+            icon: <FaCircleCheck className="commonIcons" />,
+            heading: "Do you provide ongoing support and maintenance for the IT solutions ?",
+            text:
+                "Yes, we offer comprehensive support and maintenance services for the IT solutions we provide. Our team of skilled professionals ensures that your systems are up-to-date, secure, and performing optimally at all times.",
+        },
+    ]);
 
     return (
-        <div className="contact">
-            {/* Sección de título */}
-            <section className="page__title page__contact">
-                {/* Contenedor */}
-                <div className="container">
-                    <div className="row">
-                        <div className="d-flex justify-content-center">
-                            <div className="content__contact">
-                                <div className="content__text">
-                                    <div className="col-6 d-flex">
-                                        <div className="container__text text-black" data-aos="zoom-out-down">
-                                            <h1 className="display-1 fw-bold">Contact Us</h1>
-                                            <p className="display-5">DO YOU NEED HELP?</p>
-                                        </div>
+        <Aboutus>
+            <div className="about">
+
+                <section className="page__title">
+                    <div className="container">
+                        <div className="aboutus__img" data-aos="flip-left">
+                            <img src={about} className="rounded" alt="about us"  width="100%" height="450px" />
+                        </div>
+                        <div className="content row">
+                            <div className="col-md-4 d-flex">
+                                <div className="content__text text-center" data-aos="zoom-out-down">
+                                    <h1 className="display-5 fw-bold">About Us</h1>
+                                    <p className="display-6">OUR HISTORY</p>
+                                </div>
+                            </div>
+                            <div className="col-md-8">
+                                <div className="aboutus__info mt-0 mb-0" data-aos="flip-right">
+                                    <h1 className="aboutus__title text-black mb-3" data-aos="fade-right">Who We are</h1>
+                                    <div className="about__text fs-5">
+                                        <p className="aboutus__info-p1" data-aos="fade-left">
+                                            Welcome to WebMosaic, where innovation meets reliability. Founded on the principles of cutting-edge technology and unwavering commitment to excellence, we are your trusted partner for business services and IT solutions.
+                                        </p>
+                                        <p className="about__info-p2" data-aos="fade-left">
+                                            At WebMosaic, we are a team of passionate professionals dedicated to empowering businesses with transformative technology solutions. With a rich history of successful partnerships and a forward-thinking approach, we strive to be at the forefront of the ever-evolving tech landscape.
+                                        </p>
+                                    </div>
+                                    <div class="d-flex justify-content-center mt-4">
+                                        <a href="/contactus" class="btn btnanimate fw-bold" tabindex="-1" role="button">CONTACT US</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
 
-            {/* Sección de formulario */}
-            <section className="container">
-                <div className="content row">
-                    {/* Información de contacto */}
-                    <div className="col-md-6">
-                        <div className="contactus__info">
-                            <div className="common__contact">
-                                <h3 className="title__info text-black fs-1 p-4">TO MAKE REQUESTS FOR FURTHER INFORMATION, CONTACT US</h3>
+                    </div>
+                </section>
+
+
+                <section className="container">
+                    <div className="content row">
+                        <div className="col-md-6">
+                            <div className="aboutus__info mt-0 mb-0" data-aos="flip-right">
+                                <h1 className="aboutus__title text-black mb-3 mt-0" data-aos="fade-right">Our Mission</h1>
+                                <div className="about__text fs-5">
+                                    <p className="aboutus__info-p1 mb-0" data-aos="fade-left">
+                                        Our mission is to drive your success through innovative and tailored IT solutions. We believe in the power of technology to propel businesses forward, and we are committed to delivering solutions that not only meet but exceed your expectations.
+                                    </p>
+                                </div>
                             </div>
-                            <div>
-                                {/* Mostrar información de contacto */}
-                                <div data-aos="fade-up" data-aos-duration="3000">
-                                    <div className="contact__info p-3">
-                                        <FaHome className="commonIcons" />
-                                        <div className="fs-5">Address:</div>
-                                        <div className="fs-6 text-black">Your Address 00 00000</div>
-                                    </div>
+
+                            <div className="row">
+                                <div className="col mt-5 ms-4 fs-4">
+                                    <Stack className="bagde" direction="horizontal" gap={4}>
+                                        <Badge bg="dark">HTML</Badge>
+                                        <Badge bg="dark">CSS</Badge>
+                                        <Badge bg="dark">BOOTSTRAP</Badge>
+
+                                    </Stack>
                                 </div>
-                                <div data-aos="fade-up" data-aos-duration="3000">
-                                    <div className="contact__info p-3">
-                                        <FaPhoneVolume className="commonIcons" />
-                                        <div className="fs-5">Phone:</div>
-                                        <div className="fs-6 text-black">321 123456</div>
-                                    </div>
-                                </div>
-                                <div data-aos="fade-up" data-aos-duration="3000">
-                                    <div className="contact__info p-3">
-                                        <FaMailBulk className="commonIcons" />
-                                        <div className="fs-5">Email:</div>
-                                        <div className="fs-6 text-black">your@email.com</div>
-                                    </div>
+                                <div className="col mt-3 ms-4 fs-4">
+                                    <Stack direction="horizontal" gap={4}>
+                                        <Badge bg="dark">JAVASCRIPT</Badge>
+                                        <Badge bg="dark">REACT</Badge>
+                                        <Badge bg="dark">PYTHON</Badge>
+                                    </Stack>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    {/* Formulario de contacto */}
-                    <div className="container_formulario">
-                        <div className="formulario col-6 m-2 p-4 d-flex content-justify-center" data-aos="zoom-out">
-                            <form onSubmit={handleSubmit}>
-                                <div className="input-box mb-3">
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        required
-                                    />
-                                    <label className="form-label">Full Name</label>
-                                    <span></span>
-                                </div>
-                                <div className="input-box mb-3" data-aos="fade-left">
-                                    <input
-                                        type="text"
-                                        name="lastName"
-                                        value={formData.lastName}
-                                        onChange={handleChange}
-                                        required
-                                    />
-                                    <label className="form-label">Last Name</label>
-                                    <span></span>
-                                </div>
-                                <div className="input-box mb-3" data-aos="fade-left">
-                                    <input
-                                        type="email"
-                                        name="email"
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        required
-                                    />
-                                    <label className="form-label">Your Email</label>
-                                    <span></span>
-                                </div>
-                                <div className="input-box mb-3" data-aos="fade-left">
-                                    <input
-                                        type="tel"
-                                        name="phone"
-                                        value={formData.phone}
-                                        onChange={handleChange}
-                                        required
-                                    />
-                                    <label className="form-label">Phone</label>
-                                    <span></span>
-                                </div>
-                                <div className="input-box mb-3" data-aos="fade-left">
-                                    <textarea
-                                        className="form-control"
-                                        name="message"
-                                        value={formData.message}
-                                        onChange={handleChange}
-                                        rows="3"
-                                        required
-                                    ></textarea>
-                                    <label className="form-label">Message</label>
-                                </div>
-                                <div className="d-grid gap-2 mx-auto" data-aos="fade-left">
-                                    <button type="submit" className="btn btn-outline-warning fw-bold">SEND NOW</button>
-                                </div>
-                            </form>
+                        <div className="items-content-center col-md-6">
+                            <img src={about1} alt="about us" className="rounded-5" width="480px" height="500px" />
                         </div>
                     </div>
-                </div>
-            </section>
-        </div>
-    );
-};
+                </section>
 
-export default ContactUs;
+                <section className="question">
+                    <div className="container" data-aos="zoom-in-up">
+                        <div className="container_question">
+                            <div className="question__header" data-aos="fade-up-left">
+                                <div className="common">
+                                    <h2 className="heading text-light fs-1">{header.mainHeader}<span className="txt-color"> Questions</span></h2>
+                                    <div className="commonBorder bg-light"></div>
+                                </div>
+                            </div>
+                                <div className="row mt-5">
 
+                                    <div className="col-md-6">
+                                        <img src={about2} alt="about us" className="rounded-5" width="100%" height="400px" />
+                                    </div>
 
+                                    <div className="accordion col-md-6 mb-3">
+                                        {state.map((info) => (
 
+                                            <Accordion defaultActiveKey="0">
+                                                <Accordion.Item className="text_accordion" eventKey="1">
+                                                    <Accordion.Header><span className="commonIcons">{info.icon}</span>{info.heading}</Accordion.Header>
+                                                    <Accordion.Body className="bg-dark --bs-bg-opacity: .5; text-light fs-5">{info.text}</Accordion.Body>
+                                                </Accordion.Item>
+                                            </Accordion>
+
+                                        ))}
+                                    </div>
+
+                                </div>
+                            
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </Aboutus>
+    )
+}
+
+export default AboutUs;
+
+const Aboutus = styled.section`
+  
+  .page__title,
+  .page__contact {
+    padding: 50px;
+    background: #101010;
+  }
+  
+  .container {
+    margin-inline: auto;
+    max-width: 68em;
+    padding-inline: 1rem;
+  }
+  
+  .content__text {
+    color: #DDF247;
+  }
+  
+  .aboutus__info {
+    font-family: Playfair Display;
+    padding: 40px;
+    background: #DDF247;
+    transition: all 0.5s linear;
+  }
+  
+  .content {
+    margin: 6rem 0rem;
+  }
+
+  .btnanimate{
+    background: #101010;
+    border:none;
+    color: #F4F4F2;
+    width: 80%;
+    transition: .4s all;
+  }
+
+ .btnanimate:hover {
+    transform: scale(1.2);
+  }
+  
+  /*******QUESTION******/
+  /*Question*/
+  .question {
+    background: #101010;
+    padding: 100px 0;
+  }
+  
+  .common {
+    width: 40%;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .heading {
+    margin-bottom: 20px;
+    font-family: Playfair Display;
+  }
+  
+  .txt-color {
+    color: #DDF247;
+  }
+  
+  .commonBorder {
+    height: 3px;
+    width: 200px;
+    margin: 30px auto;
+  }
+.commonIcons {
+  font-size: 40px;
+  color: #F1511B;
+  margin-right: 8px;
+}
+  /** BAGDE **/
+  .badge:hover{
+    color: #DDF247;
+  }
+`
