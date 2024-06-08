@@ -186,7 +186,7 @@ const Aboutus = styled.section`
   }
   
   .aboutus__info {
-    font-family: Playfair Display;
+    font-family: "Poppins", sans-serif;
     padding: 40px;
     background: #DDF247;
     transition: all 0.5s linear;
@@ -223,7 +223,7 @@ const Aboutus = styled.section`
   
   .heading {
     margin-bottom: 20px;
-    font-family: Playfair Display;
+    font-family: "Poppins", sans-serif;
   }
   
   .txt-color {

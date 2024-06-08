@@ -1,70 +1,243 @@
-# Getting Started with Create React App
+# WebMosaic
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
 
-## Available Scripts
+WebMosaic es una aplicación web moderna que utiliza una variedad de librerías y frameworks para proporcionar una experiencia de usuario interactiva y dinámica. Este documento describe las dependencias del proyecto y su propósito.
 
-In the project directory, you can run:
+## Dependencias
 
-### `npm start`
+### @emailjs/browser
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Versión:** ^4.3.3
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Descripción:** EmailJS permite enviar correos electrónicos directamente desde el navegador utilizando servicios de correo populares como Gmail, Outlook, etc.
 
-### `npm test`
+**Uso:** Se utiliza para enviar correos electrónicos desde la aplicación web sin necesidad de un backend dedicado.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### @fortawesome/free-brands-svg-icons
 
-### `npm run build`
+**Versión:** ^6.5.2
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Descripción:** Colección de iconos de marcas populares en formato SVG de Font Awesome.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Uso:** Se utiliza para añadir iconos de marcas (como logotipos de redes sociales) a la interfaz de usuario.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### @fortawesome/free-solid-svg-icons
 
-### `npm run eject`
+**Versión:** ^6.5.2
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Descripción:** Colección de iconos sólidos en formato SVG de Font Awesome.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Uso:** Se utiliza para añadir iconos sólidos a la interfaz de usuario.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### @fortawesome/react-fontawesome
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Versión:** ^0.2.0
 
-## Learn More
+**Descripción:** Librería que permite utilizar los iconos de Font Awesome en proyectos de React.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Uso:** Facilita la integración de los iconos de Font Awesome en componentes de React.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### @testing-library/jest-dom
 
-### Code Splitting
+**Versión:** ^5.17.0
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Descripción:** Extensiones para Jest que proporcionan matchers personalizados para probar el estado del DOM.
 
-### Analyzing the Bundle Size
+**Uso:** Se utiliza para realizar pruebas en la interfaz de usuario de manera más intuitiva.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### @testing-library/react
 
-### Making a Progressive Web App
+**Versión:** ^13.4.0
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Descripción:** Herramientas para probar componentes de React.
 
-### Advanced Configuration
+**Uso:** Permite realizar pruebas unitarias en componentes de React.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### @testing-library/user-event
 
-### Deployment
+**Versión:** ^13.5.0
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+**Descripción:** Simula eventos de usuario para pruebas con Testing Library.
 
-### `npm run build` fails to minify
+**Uso:** Se utiliza para simular interacciones del usuario en pruebas unitarias.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### animate.css
+
+**Versión:** ^4.1.1
+
+**Descripción:** Biblioteca de animaciones CSS listas para usar.
+
+**Uso:** Añade animaciones CSS a la interfaz de usuario para mejorar la experiencia visual.
+
+### aos
+
+**Versión:** ^2.3.4
+
+**Descripción:** Biblioteca de animaciones CSS para efectos de scroll.
+
+**Uso:** Se utiliza para aplicar animaciones a elementos en la página cuando el usuario hace scroll.
+
+### bootstrap
+
+**Versión:** ^5.3.3
+
+**Descripción:** Framework CSS popular para el desarrollo de interfaces responsivas y modernas.
+
+**Uso:** Proporciona estilos y componentes prediseñados para construir una interfaz de usuario responsiva.
+
+### cors
+
+**Versión:** ^2.8.5
+
+**Descripción:** Middleware para habilitar CORS (Cross-Origin Resource Sharing) en aplicaciones de Express.
+
+**Uso:** Se utiliza en el backend para permitir solicitudes de recursos desde diferentes dominios.
+
+### express
+
+**Versión:** ^4.19.2
+
+**Descripción:** Framework minimalista para aplicaciones web en Node.js.
+
+**Uso:** Proporciona la infraestructura para construir el backend de la aplicación.
+
+### font-awesome
+
+**Versión:** ^4.7.0
+
+**Descripción:** Conjunto de iconos vectoriales y logotipos sociales.
+
+**Uso:** Se utiliza para añadir iconos a la interfaz de usuario.
+
+### gsap-trial
+
+**Versión:** ^3.12.5
+
+**Descripción:** Librería de animaciones en JavaScript.
+
+**Uso:** Se utiliza para crear animaciones avanzadas en la interfaz de usuario.
+
+### hamburger-react
+
+**Versión:** ^2.5.1
+
+**Descripción:** Componente React para menús hamburguesa.
+
+**Uso:** Se utiliza para añadir un menú hamburguesa interactivo a la interfaz de usuario.
+
+### loaders.css
+
+**Versión:** ^0.1.2
+
+**Descripción:** Conjunto de animaciones CSS para mostrar loaders.
+
+**Uso:** Se utiliza para mostrar animaciones de carga en la interfaz de usuario.
+
+### nodemailer
+
+**Versión:** ^6.9.13
+
+**Descripción:** Módulo para enviar correos electrónicos desde Node.js.
+
+**Uso:** Se utiliza en el backend para enviar correos electrónicos.
+
+### react
+
+**Versión:** ^18.3.1
+
+**Descripción:** Biblioteca para construir interfaces de usuario.
+
+**Uso:** Es el núcleo de la aplicación, utilizado para construir componentes de interfaz de usuario.
+
+### react-bootstrap
+
+**Versión:** ^2.9.0-beta.1
+
+**Descripción:** Componentes de Bootstrap construidos con React.
+
+**Uso:** Facilita la integración de Bootstrap con React.
+
+### react-dom
+
+**Versión:** ^18.3.1
+
+**Descripción:** Proporciona métodos específicos del DOM que pueden ser utilizados en la parte superior de la biblioteca React.
+
+**Uso:** Se utiliza para manejar el DOM en aplicaciones React.
+
+### react-icons
+
+**Versión:** ^5.2.0
+
+**Descripción:** Incluye iconos populares como Font Awesome, Ionicons, Material Design Icons, entre otros.
+
+**Uso:** Facilita la inclusión de iconos en componentes de React.
+
+### react-leaflet
+
+**Versión:** ^4.2.1
+
+**Descripción:** Componentes de React para Leaflet, una biblioteca de mapas interactivos.
+
+**Uso:** Se utiliza para integrar mapas interactivos en la aplicación.
+
+### react-loaders
+
+**Versión:** ^3.0.1
+
+**Descripción:** Componentes de React para Loaders.css.
+
+**Uso:** Facilita el uso de animaciones de carga en proyectos React.
+
+### react-router-dom
+
+**Versión:** ^5.3.4
+
+**Descripción:** Enrutador para aplicaciones React.
+
+**Uso:** Se utiliza para manejar la navegación entre diferentes páginas o vistas de la aplicación.
+
+### react-scripts
+
+**Versión:** 5.0.1
+
+**Descripción:** Conjunto de scripts y configuraciones utilizadas por Create React App.
+
+**Uso:** Proporciona comandos para ejecutar y construir la aplicación.
+
+### styled-components
+
+**Versión:** ^6.1.11
+
+**Descripción:** Librería para aplicar estilos a componentes en React.
+
+**Uso:** Permite escribir estilos CSS directamente en los componentes de React.
+
+### web-vitals
+
+**Versión:** ^2.1.4
+
+**Descripción:** Herramientas para medir la calidad de la experiencia de usuario en la web.
+
+**Uso:** Se utiliza para recolectar métricas esenciales de rendimiento en la web.
+
+### `App.js`
+
+El archivo `App.js` es el punto de entrada principal de la aplicación React. Aquí se configuran las rutas de la aplicación y se integran los componentes principales como la barra de navegación, el pie de página y las diferentes vistas.
+
+#### Componentes
+
+ #### Home.jsx
+Componente que representa la página de inicio de la aplicación. Se muestra cuando el usuario navega a la ruta /.
+ #### AboutUs.jsx
+Componente que representa la página "Acerca de Nosotros". Se muestra cuando el usuario navega a la ruta /aboutus.
+
+ #### NavBar.jsx
+Componente de la barra de navegación que permite al usuario navegar entre las diferentes secciones de la aplicación.
+
+ #### Footer.jsx
+Componente del pie de página que proporciona información adicional o enlaces en la parte inferior de la página.
+
+ #### ContactUs.jsx
+Componente que representa la página de "Contáctanos". Se muestra cuando el usuario navega a la ruta /contactus.
