@@ -292,4 +292,185 @@ Componente que representa la página de "Contáctanos". Se muestra cuando el usu
         .textContainer: Clase CSS que define el estilo del contenedor de texto que muestra el nombre, la descripción y los iconos de cada servicio.
         .Carrusel: Clase CSS que define el estilo del carrusel de imágenes, incluyendo la disposición y el tamaño de las imágenes y los estilos responsivos para diferentes tamaños de pantalla.
         Esta estructura permite mostrar de manera organizada y coherente la información sobre la empresa y sus servicios en la página "Acerca de Nosotros".
+        # Dependencias de WebMosaic
+
+Este proyecto hace uso de las siguientes dependencias:
+
+## React
+
+React es una biblioteca de JavaScript para construir interfaces de usuario. Permite a los desarrolladores crear componentes reutilizables que gestionan su propio estado, lo que resulta en interfaces de usuario más dinámicas y eficientes.
+
+- **Versión utilizada:** {insertar versión aquí}
+- **Instalación:**
+  ```bash
+  npm install react
+  ```
+
+## React Icons
+
+React Icons es una librería que proporciona una colección de iconos para usar en aplicaciones React. Esto permite a los desarrolladores integrar fácilmente iconos en sus componentes.
+
+- **Iconos utilizados:** FaHome, FaPhoneVolume, FaMailBulk
+- **Instalación:**
+  ```bash
+  npm install react-icons
+  ```
+
+## Aos
+
+Aos es una biblioteca de animación en JavaScript que proporciona animaciones suaves al desplazarse por una página web. Facilita la creación de efectos de desplazamiento atractivos y elegantes.
+
+- **Versión utilizada:** {insertar versión aquí}
+- **Instalación:**
+  ```bash
+  npm install aos
+  ```
+
+## Styled Components
+
+Styled Components es una biblioteca para React y React Native que permite escribir estilos CSS en JavaScript. Permite a los desarrolladores crear componentes con estilos encapsulados que son fáciles de mantener y reutilizar.
+
+- **Versión utilizada:** {insertar versión aquí}
+- **Instalación:**
+  ```bash
+  npm install styled-components
+  ```
+
+
+## Componente ContactUs
+
+El componente `ContactUs` es un componente funcional de React que se encarga de inicializar la biblioteca Aos para agregar efectos de animación a la página.
+
+### Uso
+Para usar este componente, simplemente incorpóralo en el árbol de componentes de tu aplicación donde sea necesario. Asegúrate de haber importado `ContactUs` en el archivo donde lo necesitas.
+
+Este componente garantiza que Aos se inicialice correctamente al cargarse la página, lo que permite la aplicación de animaciones definidas por Aos en otros elementos de la interfaz de usuario.
+
+
+## Estado del Formulario
+
+El estado `formData` es un objeto que contiene los datos del formulario, incluyendo el nombre, apellido, correo electrónico, número de teléfono y mensaje. Se utiliza para almacenar la información introducida por el usuario en los campos del formulario.
+
+### Estructura del Objeto `formData`
+
+- **name**: Representa el nombre del usuario.
+- **lastName**: Representa el apellido del usuario.
+- **email**: Representa la dirección de correo electrónico del usuario.
+- **phone**: Representa el número de teléfono del usuario.
+- **message**: Representa el mensaje enviado por el usuario.
+
+### Uso de `useState`
+
+La función `useState` se utiliza para inicializar el estado `formData` y la función `setFormData`. `useState` toma el estado inicial del formulario como argumento y devuelve una matriz con el estado actual y una función para actualizar dicho estado.
+
+### Actualización del Estado
+
+La función `setFormData` se utiliza para actualizar el estado del formulario. Toma un nuevo objeto de datos como argumento y actualiza el estado `formData` con esos datos.
+
+---
+
+## Manejo de Cambios en el Formulario
+
+La función `handleChange` se utiliza para manejar los cambios en los campos del formulario. Se encarga de actualizar el estado `formData` con los nuevos valores introducidos por el usuario en los campos del formulario.
+
+
+### Parámetros
+
+- **e**: El evento del cambio, proporcionado por el navegador.
+  - `e.target`: El elemento del DOM que desencadenó el evento.
+  - `e.target.name`: El nombre del campo del formulario que está siendo modificado.
+  - `e.target.value`: El valor introducido por el usuario en el campo del formulario.
+
+### Actualización del Estado del Formulario
+
+La función `handleChange` utiliza la función `setFormData` para actualizar el estado del formulario (`formData`). Utiliza el operador de propagación (`...`) para copiar los datos existentes del estado `formData` y luego actualiza el valor del campo específico que ha cambiado, utilizando el nombre del campo del formulario como clave dinámica.
+
+### Uso
+
+Esta función debe asociarse a los eventos de cambio (`onChange`) de los campos del formulario para que se ejecute cada vez que el usuario introduzca o modifique datos en el formulario.
+
+Aquí tienes la documentación para la función `handleSubmit`:
+
+---
+
+## Manejo del Envío del Formulario
+
+La función `handleSubmit` se encarga de manejar el envío del formulario. Se ejecuta cuando el usuario envía el formulario y se asegura de enviar los datos del formulario al servidor.
+
+### Parámetros
+
+- **e**: El evento del envío del formulario, proporcionado por el navegador.
+
+### Descripción
+
+- La función `preventDefault()` se utiliza para prevenir el comportamiento predeterminado del navegador de enviar el formulario automáticamente.
+- Se realiza una solicitud POST al servidor utilizando la función `fetch()`, enviando los datos del formulario como un objeto JSON en el cuerpo de la solicitud.
+- Se verifica la respuesta del servidor y se manejan los casos de éxito y error correspondientes.
+
+### Uso
+
+Esta función debe asociarse al evento de envío del formulario (`onSubmit`) para que se ejecute cuando el usuario envíe el formulario.
+
+Vamos a documentar esta sección:
+
+---
+
+## Sección de Contacto
+
+Esta sección representa la parte del formulario de contacto de la página. Incluye un título y un mensaje de ayuda.
+
+### Estructura
+
+- **`<Contactus>`**: Este componente envuelve la sección de contacto, probablemente definido en otro lugar de la aplicación.
+
+- **`<section className="page__title page__contact">`**: Un contenedor `<section>` que encapsula el contenido de la sección de contacto.
+
+- **`<div className="container p-5">`**: Un contenedor `<div>` con espaciado de padding.
+
+- **Título y Mensaje**:
+  - **Título**: Un elemento `<h1>` con el texto "Contact Us".
+  - **Mensaje de Ayuda**: Un elemento `<p>` con el mensaje "DO YOU NEED HELP?".
+
+### Animaciones
+
+La propiedad `data-aos="zoom-out-down"` se utiliza para aplicar una animación de zoom hacia abajo al título de la sección cuando se carga la página.
+
+## Sección de Formulario de Contacto
+
+Esta sección del formulario de contacto permite a los usuarios enviar consultas y mensajes al propietario del sitio web.
+
+### Estructura
+
+- **Información de contacto**: La columna de la izquierda muestra la información de contacto, incluyendo dirección, teléfono y correo electrónico.
+- **Formulario de contacto**: La columna de la derecha contiene el formulario de contacto que los usuarios pueden completar y enviar.
+
+### Campos del Formulario
+
+El formulario incluye campos para:
+
+- Nombre completo
+- Apellido
+- Correo electrónico
+- Teléfono
+- Mensaje
+
+### Envío del Formulario
+
+El botón "SEND NOW" permite a los usuarios enviar el formulario. Cuando se hace clic en el botón, se activa la función `handleSubmit`, que se encarga de enviar los datos del formulario al servidor.
+
+
+## Estilos para ContactUs
+
+El componente `Contactus` está estilizado utilizando la biblioteca `styled-components`. Proporciona estilos CSS para la sección de contacto en la página.
+
+### Descripción
+
+- **`.page__contact`**: Establece el fondo de la sección de contacto.
+- **Estilos para el Título y la Información de Contacto**: Define estilos para el título "Contact Us" y la información de contacto como dirección, teléfono y correo electrónico.
+- **Estilos para el Formulario**: Define el ancho y los estilos del formulario de contacto.
+- **Estilos para los Campos de Entrada**: Define estilos para los campos de entrada del formulario.
+- **Estilos para el Botón**: Define estilos para el botón de envío del formulario.
+- **Estilos para los Iconos Comunes**: Define estilos para los iconos utilizados en la sección de contacto.
+
+
 
